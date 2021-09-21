@@ -22,6 +22,7 @@ const Form = () => {
     const { segment } = useSpeechContext()
 
     const createTransaction = () =>{
+        if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return;
         const transaction = { ...formData, amount: Number(formData.amount), id: uuidv4() }
         addTransaction(transaction)
         setFormData(initialState)
@@ -107,11 +108,11 @@ const Form = () => {
             </Grid>
             <Grid item xs={6}>
                 <TextField 
-                    type="date" 
+                    fullWidth 
                     label="Date" 
-                    fullWidth
+                    type="date" 
                     value={formData.date} 
-                    onChange={(e) => setFormData({ ...formData, date: formatDate(e.target.value) })}
+                    onChange={(e) => setFormData({ ...formData, date: formatDate(e.target.value) })} 
                 />
             </Grid>
             <Button 
