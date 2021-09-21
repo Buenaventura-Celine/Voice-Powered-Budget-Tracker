@@ -14,7 +14,7 @@ const Main = () => {
                 <Typography align="center" variant="h5">Total Balance: ₱100</Typography>
                 <Typography variant="subtitle1" style={{ lineHeight: '1.5em', marginTop: '20px' }}>
                     {/* InfoCard .... */}
-                    Try saying: ₱100 for this category at this particular moment of time
+                    Try saying: Add EXPENSE of 50 pesos in category TRAVEL for THURSDAY
                 </Typography>
                 <Divider/>
                     <Form/>
